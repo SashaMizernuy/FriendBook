@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="200dp">
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ListView
+                android:id="@+id/people"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </HorizontalScrollView>
+    </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="200dp">
+
+
+            <LinearLayout
+
+                android:id="@+id/edTextContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</ScrollView>
+
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fabAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="addPeople"
+            android:layout_gravity="end|bottom"
+            android:src="@drawable/ic_person_add" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fabDelate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="120dp"
+            android:onClick="delPeople"
+            android:layout_gravity="center|bottom"
+            android:src="@drawable/ic_delete"
+             />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fabChange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:onClick="changePeople"
+            android:layout_marginEnd="120dp"
+            android:layout_gravity="center|bottom"
+            android:src="@drawable/ic_loop"
+            android:layout_marginRight="60dp"
+            />
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fabClear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="clearPeople"
+            android:layout_gravity="start|bottom"
+            android:layout_marginRight="175dp"
+            android:src="@drawable/broom"
+            />
+
+
+    </android.support.design.widget.CoordinatorLayout>
+
+
+

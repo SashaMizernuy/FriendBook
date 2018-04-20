@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.sasha.friendbook.PrefActivity">
+
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:orientation="horizontal">
+
+            <ListView
+                android:id="@+id/fields"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:textSize="7sp" />
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:id="@+id/keysContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Название" />
+
+                <EditText
+                    android:id="@+id/edKey"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Вкладка" />
+
+                <EditText
+                    android:id="@+id/edTab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Тип" />
+
+                <Spinner
+                    android:id="@+id/spTypes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:spinnerMode="dialog"/>
+
+                <LinearLayout
+                    android:id="@+id/llSpinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="invisible"
+                    android:layout_marginLeft="20dp">
+
+                    <Spinner
+                        android:id="@+id/spValues"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:spinnerMode="dialog"/>
+
+                    <EditText
+                        android:id="@+id/edSpiner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:width="80dp"
+                        android:text=""/>
+
+                    <Button
+                        android:onClick="addSpiner"
+                        android:layout_width="30dp"
+                        android:layout_height="wrap_content"
+                        android:text="+" />
+
+                    <Button
+                        android:onClick="delSpiner"
+                        android:layout_width="30dp"
+                        android:layout_height="wrap_content"
+                        android:text="-" />
+
+                    <Button
+                        android:onClick="changeSpiner"
+                        android:layout_width="30dp"
+                        android:layout_height="wrap_content"
+                        android:text="=" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--<LinearLayout-->
+                <!--android:id="@+id/llImage"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:visibility="invisible"-->
+                <!--android:orientation="horizontal">-->
+
+                <!--<EditText-->
+                    <!--android:id="@+id/edImage"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:width="80dp"-->
+                    <!--android:text=""/>-->
+
+                <!--<Button-->
+                    <!--android:id="@+id/addImage"-->
+                    <!--android:layout_width="30dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="+" />-->
+
+            <!--</LinearLayout>-->
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Не пустое" />
+
+                <Spinner
+                    android:id="@+id/spNull"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:spinnerMode="dialog"/>
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ширина" />
+
+                <EditText
+                    android:id="@+id/edWidth"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="addField"
+                    android:text="Add" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="delField"
+                    android:text="Delate" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="changeField"
+                    android:text="Change" />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="clearField"
+                    android:text="Clear" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
+
